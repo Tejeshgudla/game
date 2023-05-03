@@ -47,6 +47,7 @@ function updateTile(tile, num) {
             tile.classList.add("x"+num.toString());
         } else {
             tile.classList.add("x8192");
+            document.getElementById("gameover").innerText("You won")
         }                
     }
 }
@@ -159,6 +160,7 @@ function slideDown() {
 
 function setTwo() {
     if (!hasEmptyTile()) {
+        document.getElementById("gameover").innerText("You lost game over!!")
         return;
     }
     let found = false;
